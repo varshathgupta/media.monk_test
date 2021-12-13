@@ -1,58 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Varshath Gupta Solution</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/ModifiersPlugin.min.js"></script>
+		<script type="text/javascript" src="./script.js">
+	</script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Varshath Gupta Solution</title>
+	</head>
+	<body>
+		<!-- Main wrapper div for the header and slider components. -->
+		<div class="wrapper">
+		    <main>
+				<!-- the header that includes the navigation buttons and the logo -->
+				<div class="controls">
+					<button id="prevButton" style="background-image: url(./images/img_left_arrow.png);"></button>
+					<div class="logo"><a href="https://media.monks.com"><img width="80" src="./images/logo.png"/></a></div>
+				    <button id="nextButton" style="background-image: url(./images/img_right_arrow.png);"></button>
+				</div>
+				<!-- the slider -->
+				<div class="slides-container">
+					<div class="slides-inner">
+						<a href="https:google.com" ><div class="slide" style="background-image: url(./images/1.png)"></div></a>
+						<a href="https:google.com" ><div class="slide" style="background-image: url(./images/2.png)"></div></a>
+						<a href="https:google.com" ><div class="slide" style="background-image: url(./images/3.png)"></div></a>
+						<a href="https:google.com" ><div class="slide" style="background-image: url(./images/4.png)"></div></a>
+						<a href="https:google.com" ><div class="slide" style="background-image: url(./images/5.png)"></div></a>
+					</div>
+				</div>
+		    </main>
+		</div>
 
-    <script src="https://kit.fontawesome.com/e7be5ae91b.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-
-<body>
-    <div class="border"> <!--Box border for carousel -->
-        <!--Logo holder-->
-       <a href="https://media.monks.com/"><img src="images/logo.png" style="margin-left: 33%; margin-top:5px; width: 100px; height:auto;"></img></a>
-
-        <!-- Slideshow container -->
-        <div class="container-slide">
-            <div class="container">
-              <a href="https://google.com/"> <img src="images/1.png" ></a>  
-            </div>
-            <div class="container">
-                <a href="https://google.com/"> <img src="images/2.png" ></a>
-            </div>
-            <div class="container">
-                <a href="https://google.com/"> <img src="images/3.png" ></a>
-            </div>
-            <div class="container">
-                <a href="https://google.com/"><img src="images/4.png"></a>
-            </div>
-            <div class="container">
-                <a href="https://google.com/"> <img src="images/5.png"></a>
-            </div>
-
-            <!-- Back and forward buttons -->
-            <a class="back " onclick="plusSlides(-1) "><i class="fas fa-chevron-circle-left"></i></img></a>
-
-            <a class="forward " onclick="plusSlides(1) "><i class="fas fa-chevron-circle-right"></i></i></a>
-        </div>
-    </div>
-    
-
-        
-        
-
-
-       
-       
-
-    
-
-</body>
-
+	</body>
 </html>

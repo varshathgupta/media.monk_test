@@ -1,70 +1,68 @@
 * {
-    
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-body {
-    margin: 0;
-    
-
-}
-img {
-    width: 290px;
-    height:176px;
-    
-
+/* the main wrapper box */
+main {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+	border: 3px solid #000000;
 }
 
-
-.border {
-    
-    border: solid ;
-    width: 300px;
-    height: 250px;
-    
-   
-} 
-
-
-/* Slideshow container */
-.container-slide{
-   
-border: solid black;
-position: relative;
-
+/* the header and navigations */
+.controls {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+	min-height: 60px;
+	border-bottom: 2px solid #000000;
 }
 
-/* Make the images invisible by default */
-
-.container {
-    
-    display: none;
-} 
-
-
-
-/* forward & Back buttons */
-
-.back,
-.forward {
+.controls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: 70%;
     cursor: pointer;
-    position: absolute;
-    top: -50px;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 30px;
-    transition: 0.4s ease;
+    background-color: #000;
+    background-position: center center;
 }
 
-
-/* Place the "forward button" to the right */
-
-.forward {
-    right: 0;
+.slides-container {
+	border-top: 2px solid ;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex: 1;
 }
 
-.back:hover,.forward:hover{
-    background-color:rgba(252, 246, 246, 0.8);
+.slide {
+	position: absolute;
+	font-size: 90px;
+	font-weight: 700;
+	color: rgba(255,255,255,0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+
+	width: 100%;
+
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-
-
+.slides-inner {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
