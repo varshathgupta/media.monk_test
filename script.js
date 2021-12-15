@@ -1,9 +1,9 @@
 // wrapping the code with onload to execute JS immediately
-window.onload = function() {
+window.onload = function () {
 	//variables for slide animation time
-	var slideDelay = 1.2; //the slides flow in every 1.5 seconds
+	var slideDelay = 1.2; //the slides flow in every 1.2 seconds
 	var slideDuration = 0.2;
-
+    var slideCont = document.querySelector(".slides-inner")
 	var slides = document.querySelectorAll(".slide");
 	var prevButton = document.querySelector("#prevButton");
 	var nextButton = document.querySelector("#nextButton");
@@ -21,7 +21,7 @@ window.onload = function() {
 	// auto animation (the timer can be added to auto animate after a certain idle-time)
 
 	var wrap = wrapPartial(-100, (numSlides - 1) * 100);
-	var timer = TweenLite.delayedCall(3, autoPlay);
+	var timer = TweenLite.delayedCall(2, autoPlay);
 
 	var animation = TweenMax.to(slides, 1, {
 		xPercent: "+=" + (numSlides * 100),
@@ -44,11 +44,11 @@ window.onload = function() {
 	window.addEventListener("resize", resize);
 
 	// navigation with buttons
-	prevButton.addEventListener("click", function() {
+	prevButton.addEventListener("click", function () {
 		animateSlides(1);
 	});
 
-	nextButton.addEventListener("click", function() {
+	nextButton.addEventListener("click", function () {
 		animateSlides(-1);
 	});
 
@@ -96,9 +96,20 @@ window.onload = function() {
 	//returns the difference between the passed function's max and min value
 	function wrapPartial(min, max) {
 		var diff = max - min;
-		return function(value) {
+		return function (value) {
 			var v = value - min;
 			return ((diff + v % diff) % diff) + min;
 		}
 	}
+
+// Mouse events
+	slideCont.addEventListener("mouseenter",function(){
+		timer.pause();
+	});
+	slideCont.addEventListener("mouseleave",function(){
+		timer.play();
+	});
 }
+
+
+
