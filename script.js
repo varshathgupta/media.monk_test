@@ -109,7 +109,17 @@ window.onload = function () {
 	slideCont.addEventListener("mouseleave",function(){
 		timer.play();
 	});
+
+	slideCont.addEventListener("click",function(){
+		window.open("https://www.google.com")
+		
+		timer.pause();
+		
+	});
+	
 }
+
+
 
 
 
